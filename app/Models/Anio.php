@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Anio extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'nombre_anio',
+    ];
+
+    public function materias()
+    {
+        return $this->hasMany(Materia::class);
+    }
+}
